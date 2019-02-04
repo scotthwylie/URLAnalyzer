@@ -25,6 +25,12 @@ Challenge project to show Images and Word Counts for a given URL
 ## Technical Documentation
 This project was written using ASP.NET MVC Core, and Razor views for the front end.  The Models and Controller Actions are very simple, allowing the dependecy injected URLAnalyzerService to do the heavy lifting on the back end.
 
-The back end URLAnalyzerService currently uses WebClient synchronously to load the web page contents, and parse it for images and words.  A future enhancement might be to use HttpClient instead, and to change the service and controller to be async.
+The back end URLAnalyzerService currently uses WebClient synchronously to load the web page contents, and parse it for images and words.  
 
 The URL input is validated by the model attributes [required] and [url] to ensure proper data entry format.  A custom ValidationAttribute [CustomUrlValidator] was added to make sure the URL entered is a valid website.
+
+## Future improvements
+A few improvements could definitely be made:
+1.  More testing of the service.
+2.  Inject logging and analytics
+3.  Depending on usage, the service may benefit from the use of async.  We could analyze alternatives to WebClient like HttpClient.
