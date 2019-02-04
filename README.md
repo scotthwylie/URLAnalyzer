@@ -6,7 +6,7 @@ Challenge project to show Images and Word Counts for a given URL
     1. Create a directory under your C:\Users\<youruser> for the solution, and change to that directory:
         ```
           mkdir URLAnalyzer
-          chdir URLAnalyzer
+          cd URLAnalyzer
         ```
     3. clone the repository to your local drive
         ```

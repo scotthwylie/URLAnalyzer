@@ -12306,11 +12306,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj",
+      "projectUniqueName": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj",
       "projectName": "URLAnalyzer",
-      "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj",
+      "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj",
       "packagesPath": "C:\\Users\\scott\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer\\obj\\",
+      "outputPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

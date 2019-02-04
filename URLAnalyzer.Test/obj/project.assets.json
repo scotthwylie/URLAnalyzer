@@ -10408,11 +10408,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer.Test\\URLAnalyzer.Test.csproj",
+      "projectUniqueName": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer.Test\\URLAnalyzer.Test.csproj",
       "projectName": "URLAnalyzer.Test",
-      "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer.Test\\URLAnalyzer.Test.csproj",
+      "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer.Test\\URLAnalyzer.Test.csproj",
       "packagesPath": "C:\\Users\\scott\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer.Test\\obj\\",
+      "outputPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10431,8 +10431,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj": {
-              "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj"
+            "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj": {
+              "projectPath": "C:\\Users\\scott\\source\\repos\\URLAnalyzer.CloneTest\\URLAnalyzer\\URLAnalyzer\\URLAnalyzer.csproj"
             }
           }
         }
