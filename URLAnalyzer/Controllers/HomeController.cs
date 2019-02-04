@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using URLAnalyzer.Models;
-using System.Linq;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using URLAnalyzer.Services;
-using System.Threading.Tasks;
 
 namespace URLAnalyzer.Controllers
 {

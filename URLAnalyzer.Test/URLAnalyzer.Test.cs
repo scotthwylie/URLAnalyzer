@@ -17,19 +17,17 @@ namespace URLAnalyzer.Test
             return model;
         }
     }
+
     public class URLAnalyzerTest
     {
         [Fact]
-        public void TestInvalidURL()
+        public void TestInvalidModel()
         {
             // Arrange
             FakeURLAnalyzerService service = new FakeURLAnalyzerService();
             HomeController homeController = new HomeController(service);
             homeController.ModelState.AddModelError("MockValidator", "MockMessage.");
-            IndexModel iModel = new IndexModel
-            {
-                Url = "junk"
-            };
+            IndexModel iModel = new IndexModel();
 
             // Act
             var actionResult = homeController.LoadUrl(iModel);
@@ -39,15 +37,12 @@ namespace URLAnalyzer.Test
         }
 
         [Fact]
-        public void TestValidURL()
+        public void TestValidModel()
         {
             // Arrange
             FakeURLAnalyzerService service = new FakeURLAnalyzerService();
             HomeController homeController = new HomeController(service);
-            IndexModel iModel = new IndexModel
-            {
-                Url = "junk"
-            };
+            IndexModel iModel = new IndexModel();
 
             // Act
             var actionResult = homeController.LoadUrl(iModel);
@@ -83,5 +78,7 @@ namespace URLAnalyzer.Test
             // Assert
             Assert.False(result);
         }
+
+        // TO DO - add some service testing.
     }
 }

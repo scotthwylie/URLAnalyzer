@@ -11,6 +11,7 @@ namespace URLAnalyzer.CustomValidators
         protected override ValidationResult IsValid(object value,
                        ValidationContext validationContext)
         {
+            // If downloading from the site fails, cause a Validation error:
             try
             {
                 WebClient client = new WebClient();

@@ -69,12 +69,12 @@ using URLAnalyzer.Models;
             WriteLiteral("\r\n<script type=\"text/javascript\">\r\n    \r\n    $(\"#Url\").rules(\"add\",\r\n        {\r\n            customurlvalidator: true,\r\n            messages: {\r\n                customurlvalidator: \"URL must contain \'www\' dude.\"\r\n            }\r\n        });\r\n\r\n</script>\r\n\r\n");
             EndContext();
             BeginContext(319, 646, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f35386cc8ce421c92add1b1e847f48b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61ae6841fb9948769bc9068f60cd06b3", async() => {
                 BeginContext(417, 200, true);
                 WriteLiteral("\r\n    <h4>Show images and word counts for a URL</h4>\r\n    <hr />\r\n    <div class=\"form-group\">\r\n        <label class=\"col-md-2 control-label\">URL</label>\r\n        <div class=\"col-md-10\">\r\n            ");
                 EndContext();
                 BeginContext(617, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "59a486c7a6f740928c1848d47f25bfcb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f6c147db6ed64e3c8a5af434ae5036e7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -98,7 +98,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n            ");
                 EndContext();
                 BeginContext(675, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f6aaf4a7b644f8aae5ae52ed7af6cf2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "459bddcf9d05422b8f89d9111d4ac82b", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
