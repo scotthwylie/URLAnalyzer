@@ -1,0 +1,116 @@
+﻿@model LoadUrlModel
+
+@{
+    ViewData["Title"] = "LoadUrl";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div class="container">
+    <div class="card-deck row">
+        <div class="card text-center col-lg-9">
+            <div class="card-body">
+                <h3 class="card-header">Images: <span id="imgCount">1</span> of @Model.ImageList.Count()</h3>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner text-center">
+                        @{
+                            var imageNdx = 0;
+                            foreach (var image in @Model.ImageList)
+                            {
+                                var divClass = imageNdx++ == 0 ? "carousel-item active" : "carousel-item";
+                                <div class="@divClass">
+                                    <img src="@image" class="img-responsive" />
+                                </div>
+                            }
+                        }
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card text-center col-lg-3">
+            <div class="card-body">
+                <h3 class="card-header">Total Word Count</h3>
+                <div class="justify-content-center d-flex" style="height: 300px;">
+                    <h2 class="justify-content-center align-self-center card-theme" >
+                        @Model.WordCount
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-deck row">
+        <div class="card text-center col-lg-12">
+            <div class="card-body">
+                <h3 class="card-header">10 Most Frequent Words</h3>
+                <div id="top10chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        // Set the image counter for display of "Images: x of y".
+        $(document).ready(function(){
+            $("#myCarousel").on('slid.bs.carousel', function(){
+                var currentIndex = $("div.active").index() + 1;
+                if (currentIndex == 22) {
+                    currentIndex = 1;
+                }
+                $("#imgCount").text(currentIndex);
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        // Use google charts for a column chart of 10 most frequent words
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Column Chart with Data Array:
+            let top10array = [];
+            top10array.push(['Word', 'Count', { role: 'style' }]);
+            let barColors = ['#3F69AA', '#D5AE41'];
+
+            // Grab first 10 elements from the Model's WordCounts property, and push onto the array.
+            @for (int ndx=0; ndx < 10 && ndx < Model.WordCounts.Count(); ndx++) 
+            {
+                var element = Model.WordCounts.ElementAt(ndx);
+                @:top10array.push(["@element.Key", parseInt("@element.Value", 10), barColors[@ndx %2]]);
+            }
+            var data = google.visualization.arrayToDataTable(top10array, false);
+            var option = {
+                title: '', // don't want the title, our card will have the header
+                chartArea: {'width': '90%', 'height': '80%'},
+                //width: 800,
+                height: 300
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('top10chart'));
+            chart.draw(data, option);
+        }
+
+        $(window).resize(function(){
+            drawChart();
+        });
+    </script>
+    }

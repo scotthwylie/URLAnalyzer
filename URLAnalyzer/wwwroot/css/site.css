@@ -1,0 +1,66 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.carousel-inner {
+    height: 300px;
+}
+
+.card-deck.row {
+    margin:20px;
+}
+
+.carousel img {
+    margin: auto;
+    height: 300px;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
+.carousel-inner img {
+    margin: auto;
+}
+
+.chart {
+    width:100%;
+    min-height: 300px;
+}
+
+.card-theme, .card-header {
+    color: #3F69AA;
+}

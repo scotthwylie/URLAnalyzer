@@ -1,0 +1,33 @@
+﻿@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script type="text/javascript">
+    
+    $("#Url").rules("add",
+        {
+            customurlvalidator: true,
+            messages: {
+                customurlvalidator: "URL must contain 'www' dude."
+            }
+        });
+
+</script>
+
+<form asp-controller="Home" asp-action="LoadUrl" method="get" class="form-horizontal" role="form">
+    <h4>Show images and word counts for a URL</h4>
+    <hr />
+    <div class="form-group">
+        <label class="col-md-2 control-label">URL</label>
+        <div class="col-md-10">
+            <input asp-for="Url" class="form-control" />
+            <span asp-validation-for="Url" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-primary btn-lg">Show Results</button>
+        </div>
+    </div>
+</form>
