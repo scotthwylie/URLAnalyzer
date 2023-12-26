@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/URLAnalyzer
+/.vs/*
+/obj
+/bin
+/URLAnalyzer.Test/obj/Debug/netcoreapp2.1
+/URLAnalyzer.Test/obj
+/URLAnalyzer/bin/Debug/netcoreapp2.1
+/URLAnalyzer/obj
